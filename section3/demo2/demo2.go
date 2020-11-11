@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	var number uint64 = 99
+	var number uint64 = 4
 	squreRoot := getSqureRoot(number, 0.00000000000001, 100000)
 	if squreRoot == -1 {
 		fmt.Printf("请输入大1的正整数\n")
