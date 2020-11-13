@@ -10,12 +10,12 @@ func main() {
 	fmt.Printf("整数 %d 可以被分解为:\n", number)
 	getResult(number)
 
-	// number=0
-	// fmt.Printf("整数 %d 可以被分解为:\n",number)
-	// getResult(number)
+	number = 0
+	fmt.Printf("整数 %d 可以被分解为:\n", number)
+	getResult(number)
 
-	// number=-8
-	// fmt.Printf("整数 %d 可以被分解为:\n",number)
+	// number = -4
+	// fmt.Printf("整数 %d 可以被分解为:\n", number)
 	// getResult(number)
 }
 
@@ -44,21 +44,21 @@ func getResult(number int) {
 // returns none
 func split(divdeds []int, number int, result []int) {
 
-	var initValue = 1
+	//var initValue = 1
 	if number == 1 || number == -1 {
-		initValue = number
-		containsInitValue := false
-		for i := 0; i < len(result); i++ {
-			if initValue == result[i] {
-				containsInitValue = true
-				break
-			}
-		}
+		// initValue = number
+		// containsInitValue := false
+		// for i := 0; i < len(result); i++ {
+		// 	if initValue == result[i] {
+		// 		containsInitValue = true
+		// 		break
+		// 	}
+		// }
 		fmt.Print(result)
 		fmt.Print("\n")
-		if containsInitValue {
-			return
-		}
+		// if containsInitValue {
+		// 	return
+		// }
 
 	} else if number == 0 {
 		return
