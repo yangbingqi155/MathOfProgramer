@@ -14,9 +14,9 @@ func main() {
 	fmt.Printf("整数 %d 可以被分解为:\n", number)
 	getResult(number)
 
-	// number = -4
-	// fmt.Printf("整数 %d 可以被分解为:\n", number)
-	// getResult(number)
+	number = 4
+	fmt.Printf("整数 %d 可以被分解为:\n", number)
+	getResult(number)
 }
 
 // @title getResult
@@ -46,33 +46,27 @@ func split(divdeds []int, number int, result []int) {
 
 	//var initValue = 1
 	if number == 1 || number == -1 {
-		// initValue = number
-		// containsInitValue := false
-		// for i := 0; i < len(result); i++ {
-		// 	if initValue == result[i] {
-		// 		containsInitValue = true
-		// 		break
-		// 	}
-		// }
 		fmt.Print(result)
 		fmt.Print("\n")
-		// if containsInitValue {
-		// 	return
-		// }
-
 	} else if number == 0 {
 		return
 	}
 
 	for i := 0; i < len(divdeds); i++ {
-		containsInitValue := false
+		containsInitValueOne := false
+		containsInitValueMinusOne := false
 		for k := 0; k < len(result); k++ {
-			if 1 == result[k] || -1 == result[k] {
-				containsInitValue = true
-				break
+			if 1 == result[k] {
+				containsInitValueOne = true
+			}
+			if -1 == result[k] {
+				containsInitValueMinusOne = true
 			}
 		}
-		if containsInitValue && (1 == divdeds[i] || -1 == divdeds[i]) {
+		if containsInitValueOne && 1 == divdeds[i] {
+			continue
+		}
+		if containsInitValueMinusOne && -1 == divdeds[i] {
 			continue
 		}
 
