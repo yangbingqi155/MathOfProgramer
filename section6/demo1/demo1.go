@@ -23,8 +23,8 @@ func mergeSort(numbers []int) []int {
 	right := numbers[mid:len(numbers)]
 	left = mergeSort(left)
 	right = mergeSort(right)
-	numbers = merge(left, right)
-	return numbers
+	mergeResult := merge(left, right)
+	return mergeResult
 }
 
 func merge(left []int, right []int) []int {
